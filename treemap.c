@@ -119,12 +119,14 @@ Pair * nextTreeMap(TreeMap * tree) {
         while(aux -> left != NULL){
             aux = aux -> left;
         }
+        tree -> current = aux;
         return aux -> pair;
     }
     aux = tree -> current -> parent;
 
     while(aux -> parent != NULL){
         if(tree -> lower_than(aux -> pair -> key, aux -> parent -> pair -> key) == 1){
+            tree -> current = aux -> parent;
             return aux -> parent -> pair;
         }
         aux = aux -> parent;
