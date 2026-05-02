@@ -326,3 +326,9 @@ treemap.c:229:22: error: initialization of ‘TreeNode *’ from incompatible po
   229 |     TreeNode * aux = searchTreeMap(tree, key);
       |                      ^~~~~~~~~~~~~
 5ba17b7
+Sat May  2 11:18:40 PM UTC 2026: 
+ treemap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  26|1
+total_score: 50/60
+2a9239b
