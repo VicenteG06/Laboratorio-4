@@ -226,9 +226,20 @@ Pair * nextTreeMap(TreeMap * tree) {
 // Finalmente retorne el par del nodo ub_node.
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    if(searchTreeMap(tree, key) != NULL) return searchTreeMap(tree,key);
-    
-    return NULL;
+    if(tree -> root == NULL) return NULL;
+    TreeNode* aux = tree -> root;
+    TreeNode* ub_node = NULL;
+    while(aux != NULL){
+        if(tree -> lower_than(key, aux -> pair -> key) == 1){
+            ub_node = aux;
+            aux = aux -> left;
+        }
+        else if(tree -> lower_than(aux -> pair -> key, key) == 1){
+            aux = aux -> right;
+        }
+        else return aux -> pair;
+    }
+    return ub_node -> pair;
 }
 
 
