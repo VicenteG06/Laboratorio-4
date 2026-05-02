@@ -316,3 +316,13 @@ Sat May  2 11:16:45 PM UTC 2026:
  tests:  25|1
 total_score: 50/60
 2941e64
+Sat May  2 11:17:52 PM UTC 2026: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:229:22: error: initialization of ‘TreeNode *’ from incompatible pointer type ‘Pair *’ [-Wincompatible-pointer-types]
+  229 |     TreeNode * aux = searchTreeMap(tree, key);
+      |                      ^~~~~~~~~~~~~
+5ba17b7
