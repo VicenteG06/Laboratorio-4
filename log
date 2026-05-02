@@ -265,3 +265,14 @@ Sat May  2 11:04:13 PM UTC 2026:
  tests:  23|2
 total_score: 43/60
 901046b
+Sat May  2 11:10:24 PM UTC 2026: 
+ treemap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:160:36: error: statement with no effect [-Werror=unused-value]
+  160 |             tree -> root -> parent == NULL;
+      |                                    ^
+cc1: all warnings being treated as errors
+54349a2
