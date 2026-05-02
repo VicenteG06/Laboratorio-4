@@ -164,11 +164,12 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }
     //Caso con dos hijos
     else{
-        TreeNode * aux = node -> right;
-        aux = minimum(aux);
-        node -> pair -> key = aux -> pair -> key;
-        node -> pair -> value = aux -> pair -> value;
+        TreeNode * aux = minimum(node -> right);
+        void * aux_key = aux -> pair -> key;
+        void * aux_value = aix -> pair -> value;
         removeNode(tree, aux);
+        node -> pair -> key = aux_key;
+        node -> pair -> value = aux_value;
     }
 }
 
